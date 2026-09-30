@@ -3,6 +3,7 @@ package org.example
 import org.example.dresseur.Entraineur
 import org.example.monde.Zone
 import org.example.monstre.EspeceMonstre
+import org.example.monstre.IndividuMonstre
 
 var joueur = Entraineur(1, "Sacha", 100)
 var rival = Entraineur(2,"Regis",200)
@@ -26,6 +27,10 @@ var route2 = Zone(1,"Plaine Belaid",150, especesMonstres = mutableListOf(espece_
 fun main() {
     route1.zoneSuivante = route2
     route2.zonePrecedente = route1
+    val monstre1 = IndividuMonstre(1, "springleaf", 1500.0, especeSpringLeaf)
+    val monstre2 = IndividuMonstre(2, "flamkip", 1500.0, especeFlamkip)
+    val monstre3 = IndividuMonstre(3, "aquamy", 1500.0, especeAquamy)
+
     /* Springleaf
     println(especeSpringleaf.afficheArt())
     println(especeSpringleaf.afficheArt(false))
